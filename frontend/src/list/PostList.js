@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import styled from "styled-components";
 import PostListItem from "./PostListItem";
 
@@ -19,9 +19,10 @@ function PostList(props) {
   return (
     <Wrapper>
       {posts.map((post, index) => {
+        console.log(post);
         return (
           <PostListItem
-            key={post.id}
+            key={index}
             post={post}
             onClick={() => {
               onClickItem(post);
